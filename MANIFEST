@@ -1,0 +1,11 @@
+CHANGES
+INSTALL
+LICENSE
+MANIFEST
+META.json
+Makefile.PL
+README
+bin/test.pl
+lib/Debug/Simpler.pm
+t/release-pod-syntax.t
+t/release-test-version.t

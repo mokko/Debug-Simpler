@@ -1,0 +1,35 @@
+NAME
+    Debug::Simpler - Debug messages.
+
+VERSION
+    version 0.001
+
+  SYNOPSIS
+            #inbuilt debug (to STDOUT)
+            use Simple::Messages 'debug';
+            Simple::Messages::debug_on;
+            debug 'my pretty debug message';
+        
+            #DIY - build your own
+            use Simple::Messages 'debug', 'register_debug', 'debug_on';
+            debug_on;
+
+            my $asub=sub {
+                    my $msg=shift or return;
+                    print " D: different debug: $msg\n";
+            };
+
+            register_debug ($asub);
+            debug 'my pretty debug message';
+
+  SEE ALSO
+	Debug::Simple
+AUTHOR
+    Maurice Mengel <mauricemengel@gmail.com>
+
+COPYRIGHT AND LICENSE
+    This software is copyright (c) 2011 by Maurice Mengel.
+
+    This is free software; you can redistribute it and/or modify it under
+    the same terms as the Perl 5 programming language system itself.
+
