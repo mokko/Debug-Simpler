@@ -1,5 +1,5 @@
 {
-   "abstract" : "Debug messages. ",
+   "abstract" : "Simple debug messages to STDOUT or do it yourself.",
    "author" : [
       "Maurice Mengel <mauricemengel@gmail.com>"
    ],
@@ -47,6 +47,6 @@
          "web" : "https://github.com/mokko/Debug-Simpler"
       }
    },
-   "version" : "0.001"
+   "version" : "0.002"
 }
 

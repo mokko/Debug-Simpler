@@ -5,7 +5,9 @@ MANIFEST
 META.json
 Makefile.PL
 README
-bin/test.pl
+bin/eg.pl
 lib/Debug/Simpler.pm
+t/00_load.t
+t/01_debug.t
 t/release-pod-syntax.t
 t/release-test-version.t

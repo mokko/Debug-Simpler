@@ -9,7 +9,7 @@ use ExtUtils::MakeMaker 6.30;
 
 
 my %WriteMakefileArgs = (
-  "ABSTRACT" => "Debug messages. ",
+  "ABSTRACT" => "Simple debug messages to STDOUT or do it yourself.",
   "AUTHOR" => "Maurice Mengel <mauricemengel\@gmail.com>",
   "BUILD_REQUIRES" => {
     "Test::More" => 0
@@ -19,7 +19,7 @@ my %WriteMakefileArgs = (
   },
   "DISTNAME" => "Debug-Simpler",
   "EXE_FILES" => [
-    "bin/test.pl"
+    "bin/eg.pl"
   ],
   "LICENSE" => "perl",
   "NAME" => "Debug::Simpler",
@@ -30,7 +30,7 @@ my %WriteMakefileArgs = (
     "strict" => 0,
     "warnings" => 0
   },
-  "VERSION" => "0.001",
+  "VERSION" => "0.002",
   "test" => {
     "TESTS" => "t/*.t"
   }

@@ -1,8 +1,37 @@
 NAME
-    Debug::Simpler - Debug messages.
+    Debug::Simpler - Simple debug messages to STDOUT or do it yourself.
 
 VERSION
-    version 0.001
+    version 0.002
+
+FUNCTIONS
+  debug($msg);
+    Triggers the actual debug function, &debug_inbuilt($msg) as default.
+    Expects debug message as string. Further parameters are handed down.
+    Return value depends on the return value of the actual debug function.
+
+  debug_on();
+    turns debug messages on. Expects no parameters, returns 1 on success.
+
+  debug_off();
+    turns debug messages off. Expects no parameters, returns 1 on success.
+
+  debug_inbuilt($msg);
+    Outputs $msg to STDOUT, adding a newline. Returns 1 on success and
+    nothing on failure.
+
+    This is used as the default debug handler.
+
+  register_debug ($asub);
+    Register a subroutine for the debug function.
+
+    Returns 1 on success, may carp on error.
+
+  warning $msg;
+  register_warning ($asub);
+    Register a subroutine for warnings.
+
+    Returns 1 on success, may carp on error.
 
   SYNOPSIS
             #inbuilt debug (to STDOUT)
@@ -20,10 +49,14 @@ VERSION
             };
 
             register_debug ($asub);
-            debug 'my pretty debug message';
+        
+            #different way to say the same using a sub reference
+            sub asub {return shift}
+            register_debug(\&asub)
 
-  SEE ALSO
-	Debug::Simple
+SEE ALSO
+            Debug::Simple
+
 AUTHOR
     Maurice Mengel <mauricemengel@gmail.com>
 
